@@ -1,0 +1,12 @@
+.vs/
+*.suo
+*.user
+[Bb]in/
+[Oo]bj/
+packages/
+App_Data/*.mdf
+App_Data/*.ldf
+*.pubxml
+*.pubxml.user
+*.log
+*.tmp

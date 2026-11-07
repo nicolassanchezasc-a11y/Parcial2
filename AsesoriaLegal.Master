@@ -1,0 +1,108 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AsesoriaLegal.master.cs" Inherits="Parcial2.AsesoriaLegal" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Asesoria Legal</title>
+    <style>body {
+    margin: 0;
+    padding: 20px;
+    background-color: #d9d9d9;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+}
+
+.contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 1px solid #b5b5b5;
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.encabezado h1 {
+    margin: 0;
+    font-size: 26px;
+    color: #2c3e50;
+}
+
+nav {
+    background-color: #2c3e50;
+    margin: 15px -30px;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.contenido {
+    padding: 20px 0;
+}
+
+.socios {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 0;
+}
+
+.socios img {
+    height: 40px;
+    width: auto;
+}
+
+footer p {
+    margin: 5px 0;
+}
+}</style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="contenedor">
+            <div class="encabezado">
+                <asp:Image ID="logo3" runat="server" ImageUrl="~/Subidas/logo_3.png" Height="50px" />
+                <h1>Asesorias Legales El Ejemplo</h1>
+            </div>
+            <nav>
+                <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Default.aspx">Inicio</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Registro.aspx">Registrarse</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Documentos.aspx">Gestion de Documentos</asp:HyperLink>
+            </nav>
+
+            <div class="contenido">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <footer>
+                <p>Trabajamos con:</p>
+                 <div class="socios">
+                    <asp:Image ID="logo1" runat="server" ImageUrl="~/Subidas/logo_1.png" AlternateText="Empresa 1" />
+                    <asp:Image ID="logo2" runat="server" ImageUrl="~/Subidas/logo_2.png" AlternateText="Empresa 2" />
+                </div>
+                <p>© Copyright 2020 - 2026 | El Ejemplo | Todos los derechos reservados.</p>
+            </footer>
+        </div>
+    </form>
+</body>
+
+</html>
